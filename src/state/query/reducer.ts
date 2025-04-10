@@ -2,37 +2,37 @@ import { QueryState, QueryAction } from "./types";
 
 const initialQueries = [
   {
-    id: '1',
-    name: '1840 Penny Black',
-    content: 'SELECT * FROM stamps WHERE year = 1840;',
+    id: "1",
+    name: "1840 Penny Black",
+    content: "SELECT * FROM stamps WHERE year = 1840;",
     saved: true,
-    draft: null
+    draft: null,
   },
   {
-    id: '2',
-    name: '1856 British Guiana',
+    id: "2",
+    name: "1856 British Guiana",
     content: 'SELECT * FROM stamps WHERE rarity = "ultra_rare";',
     saved: true,
-    draft: null
+    draft: null,
   },
   {
-    id: '3',
-    name: 'Apollo 11 First Day Cover',
+    id: "3",
+    name: "Apollo 11 First Day Cover",
     content: 'SELECT * FROM covers WHERE event = "moon_landing";',
     saved: true,
-    draft: null
+    draft: null,
   },
   {
-    id: '4',
-    name: 'Royal Wedding 1981',
+    id: "4",
+    name: "Royal Wedding 1981",
     content: 'SELECT * FROM covers WHERE event = "royal_wedding";',
     saved: true,
-    draft: null
-  }
+    draft: null,
+  },
 ];
 
 export const initialState: QueryState = {
-  queries: initialQueries
+  queries: initialQueries,
 };
 
 export function queryReducer(

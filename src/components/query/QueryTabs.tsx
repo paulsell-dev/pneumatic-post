@@ -8,7 +8,9 @@ export function QueryTabs() {
     state: { tabs, activeTabId },
     dispatch,
   } = useTabs();
-  const { state: { queries } } = useQuery();
+  const {
+    state: { queries },
+  } = useQuery();
 
   const addTab = () => {
     const newId = Date.now().toString();
@@ -41,7 +43,7 @@ export function QueryTabs() {
     <div className="border-b border-gray-700">
       <div className="flex items-center">
         {tabs.map((tab) => {
-          const query = queries.find(q => q.id === tab.queryId);
+          const query = queries.find((q) => q.id === tab.queryId);
           const hasDraft = query?.draft !== null;
 
           return (
@@ -65,7 +67,9 @@ export function QueryTabs() {
                   onChange={(e) => renameTab(tab.id, e.target.value)}
                 />
               ) : (
-                <span className="bg-transparent border-none outline-none focus:ring-1 focus:ring-blue-500 rounded px-1">{tab.name}</span>
+                <span className="bg-transparent border-none outline-none focus:ring-1 focus:ring-blue-500 rounded px-1">
+                  {tab.name}
+                </span>
               )}
               <button
                 className="ml-2 text-gray-400 hover:text-gray-200"
@@ -74,7 +78,7 @@ export function QueryTabs() {
                   removeTab(tab.id);
                 }}
               >
-                {hasDraft ? '•' : '×'}
+                {hasDraft ? "•" : "×"}
               </button>
             </div>
           );

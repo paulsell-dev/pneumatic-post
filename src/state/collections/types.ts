@@ -1,5 +1,3 @@
-import { Query } from "../query";
-
 export interface Collection {
   id: number;
   name: string;
@@ -36,5 +34,11 @@ export type CollectionsAction =
       type: "REORDER_COLLECTIONS";
       payload: { sourceIndex: number; destinationIndex: number };
     }
-  | { type: "ADD_QUERY_TO_COLLECTION"; payload: { collectionId: number; queryId: string } }
-  | { type: "REMOVE_QUERY_FROM_COLLECTION"; payload: { collectionId: number; queryId: string } };
+  | {
+      type: "ADD_QUERY_TO_COLLECTION";
+      payload: { collectionId: number; queryId: string };
+    }
+  | {
+      type: "REMOVE_QUERY_FROM_COLLECTION";
+      payload: { collectionId: number; queryId: string };
+    };

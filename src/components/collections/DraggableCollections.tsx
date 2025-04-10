@@ -76,7 +76,7 @@ export function DraggableCollections() {
                       collection={collection}
                       isSelected={selectedCollection?.id === collection.id}
                       onClick={() => handleCollectionClick(collection.id)}
-                    />  
+                    />
                   </div>
                 )}
               </Draggable>

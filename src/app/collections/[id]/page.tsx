@@ -4,13 +4,7 @@ import { CollectionsList } from "../../../components/collections/CollectionsList
 import { QueryTabs } from "../../../components/query/QueryTabs";
 import { QueryEditor } from "../../../components/query/QueryEditor";
 
-type Props = {
-  params: {
-    id: string;
-  };
-};
-
-export default function CollectionPage({}: Props) {
+export default function CollectionPage() {
   return (
     <div className="flex h-screen">
       {/* Left Column - Collections List */}
@@ -22,7 +16,7 @@ export default function CollectionPage({}: Props) {
       <div className="w-2/3 p-4">
         <QueryTabs />
         <div className="mt-4">
-          <QueryEditor value="SELECT * FROM users;" onChange={() => {}} />
+          <QueryEditor />
         </div>
       </div>
     </div>

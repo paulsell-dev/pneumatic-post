@@ -5,13 +5,13 @@ const initialCollections = [
     id: 1,
     name: "Vintage Stamps",
     description: "A collection of rare vintage stamps",
-    queryIds: ['1', '2']
+    queryIds: ["1", "2"],
   },
   {
     id: 2,
     name: "First Day Covers",
     description: "Special edition first day covers",
-    queryIds: ['3', '4']
+    queryIds: ["3", "4"],
   },
 ];
 
@@ -97,20 +97,28 @@ export function collectionsReducer(
     case "ADD_QUERY_TO_COLLECTION":
       return {
         ...state,
-        collections: state.collections.map(collection =>
+        collections: state.collections.map((collection) =>
           collection.id === action.payload.collectionId
-            ? { ...collection, queryIds: [...collection.queryIds, action.payload.queryId] }
-            : collection
-        )
+            ? {
+                ...collection,
+                queryIds: [...collection.queryIds, action.payload.queryId],
+              }
+            : collection,
+        ),
       };
     case "REMOVE_QUERY_FROM_COLLECTION":
       return {
         ...state,
-        collections: state.collections.map(collection =>
+        collections: state.collections.map((collection) =>
           collection.id === action.payload.collectionId
-            ? { ...collection, queryIds: collection.queryIds.filter(id => id !== action.payload.queryId) }
-            : collection
-        )
+            ? {
+                ...collection,
+                queryIds: collection.queryIds.filter(
+                  (id) => id !== action.payload.queryId,
+                ),
+              }
+            : collection,
+        ),
       };
     default:
       return state;

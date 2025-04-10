@@ -16,7 +16,7 @@ export default function CollectionsPage() {
       <div className="w-2/3 p-4">
         <QueryTabs />
         <div className="mt-4">
-          <QueryEditor value="SELECT * FROM users;" onChange={() => {}} />
+          <QueryEditor />
         </div>
       </div>
     </div>

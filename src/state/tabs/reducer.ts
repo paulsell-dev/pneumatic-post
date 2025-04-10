@@ -8,7 +8,7 @@ export const initialState: TabsState = {
 export function tabsReducer(state: TabsState, action: TabsAction): TabsState {
   switch (action.type) {
     case "ADD_TAB":
-      const tabExists = state.tabs.some(tab => tab.id === action.payload.id);
+      const tabExists = state.tabs.some((tab) => tab.id === action.payload.id);
       return {
         ...state,
         tabs: tabExists ? state.tabs : [...state.tabs, action.payload],

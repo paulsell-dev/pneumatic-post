@@ -18,7 +18,7 @@ export function CollectionsList() {
           id: newId,
           name: newCollection.name,
           description: newCollection.description,
-          items: [],
+          queryIds: [],
         },
       });
     }
